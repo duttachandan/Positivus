@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: #191a23;
+  --primary-color: #b9ff66;
+  --primary-txt-size-sm: 10px;
+  --section-gap-sm: 30px 0;
+  --section-header-gap: 40px;
+  --section-header-gap-sm: 20px;
+  --seconday-color: #f3f3f3;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+}
+
+/*================common classes===============*/
+
+.container {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col6 {
+  padding: 0 15px;
+}
+
+/*================header section================*/
+
+.header-section {
+  padding: 15px 0;
+}
+
+.header-section > div > div {
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.nav-logo > a > img {
+  max-width: 220px;
+  max-height: 56px;
+  object-fit: contain;
+}
+
+.menu {
+  padding: 0 15px;
+}
+
+.nav-right,
+.nav-right > nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-btn > a {
+  padding: 20px 35px;
+  border-radius: 14px;
+  border: 1px solid black;
+}
+
+.menu > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.menu {
+  display: none;
+}
+
+/*=================Banner Section==================*/
+
+.banner-section {
+  padding: 70px 0;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-left,
+.banner-right {
+  max-width: 531px;
+  gap: 20px;
+}
+
+.banner-content > .heading1 {
+  font-weight: bold;
+  display: none;
+  z-index: -1;
+}
+
+.heading1 {
+  font-size: 60px;
+}
+
+.banner-left > p {
+  margin-block: 35px;
+  font-size: 20px;
+  max-width: 498px;
+}
+
+.banner-left > a {
+  padding: 20px 35px;
+  background: var(--dark-color);
+  border-radius: 14px;
+  color: white;
+}
+
+.banner-right {
+  max-width: 600px;
+}
+
+.banner-right > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/*===============Company Logo Section==============*/
+
+.cmpny-logo-section > div > ul.row {
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cmpny-logo-section > .container > .row > li > img {
+  width: 124px;
+  object-fit: contain;
+}
+
+.cmpny-logo-section > .container > .row > li {
+  padding: 0 15px;
+}
+
+/*==============Services Cards Section============== */
+
+.cards-section {
+  padding: 140px 0;
+}
+
+.text-2 {
+  font-size: 40px;
+  background: var(--primary-color);
+  padding: 0 7px;
+  border-radius: 7px;
+}
+
+.cards-header {
+  display: flex;
+  gap: var(--section-header-gap);
+  flex-wrap: wrap;
+}
+
+.cards-content > .row {
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.cards-content > .row > div {
+  margin-bottom: 40px;
+}
+
+.services-card {
+  max-width: 600px;
+  width: 100%;
+  min-height: 310px;
+  border: 1px solid var(--dark-color);
+  border-radius: 45px;
+  box-shadow: 0 5px 0 var(--dark-color);
+  background: var(--seconday-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  gap: 69px;
+}
+
+.cards-content
+  > .row
+  > .col6
+  > div:first-child
+  > .services-card-content
+  > .text3
+  > span {
+  background: var(--primary-color) !important;
+}
+
+.cards-content > .row > .col6:nth-child(2) > div,
+.cards-content > .row > .col6:nth-child(5) > div {
+  background-color: var(--primary-color);
+}
+
+.cards-content > .row > .col6:nth-child(3) > div,
+.cards-content > .row > .col6:nth-child(6) > div {
+  background: var(--dark-color);
+}
+
+.services-card-content {
+  max-width: 221px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 210px;
+}
+
+.text3 > span {
+  background: white;
+  border-radius: 7px;
+  padding-inline: 7px;
+  font-size: 30px;
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+
+.services-card-content > a {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  align-items: center;
+}
+
+.services-card-content > a > img {
+  max-width: 41px;
+  object-fit: contain;
+}
+
+.services-card-img {
+  max-width: 210px;
+}
+
+.services-card-img > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+  /*================Nav Section==============*/
+  .nav-logo > a > img {
+    max-width: 150px;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 50px;
+    backdrop-filter: blur(100px);
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    animation: leftToRightSlide 2s 1 forwards;
+    /* animation-fill-mode: fo; */
+  }
+
+  @keyframes leftToRightSlide {
+    from {
+      transform: translate(0, -800px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  .nav-right,
+  .nav-right > nav > ul {
+    flex-basis: 100%;
+    flex-direction: column;
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  #hamberger:checked ~ .nav-right,
+  #hamberger:checked ~ .nav-right > nav > ul {
+    display: flex;
+  }
+
+  /*============Banner Section============*/
+
+  .banner-section {
+    padding: var(--section-gap-sm);
+  }
+  .banner-content {
+    flex-direction: column-reverse;
+  }
+
+  .banner-content > .heading1 {
+    display: block;
+    font-size: 28px;
+    animation: left-right 1s forwards linear;
+  }
+
+  .heading1 {
+    display: none;
+  }
+
+  @keyframes left-right {
+    from {
+      transform: translate(100px, 0);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  .banner-left > p {
+    font-size: var(--primary-txt-size-sm);
+    margin-block: 15px;
+  }
+
+  .banner-left > a {
+    font-size: 10px;
+    padding: 10px 20px;
+    border-radius: 7px;
+  }
+
+  .banner-right {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-right > img {
+    width: 80%;
+  }
+
+  /*=============Company Logo Section===========*/
+
+  .cmpny-logo-section > div > ul.row {
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+
+  .cmpny-logo-section > .container > .row > li > img {
+    width: 62px;
+  }
+
+  /*==============Cards Section==============*/
+
+  .cards-section {
+    padding: var(--section-gap-sm);
+  }
+
+  .cards-header {
+    gap: var(--section-header-gap-sm);
+  }
+
+  .cards-header > .text-2 {
+    font-size: 18px;
+  }
+
+  .cards-header > p {
+    font-size: var(--primary-txt-size-sm);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-card {
+    padding: 20px 10px;
+    gap: 30px;
+    max-width: 95%;
+    margin: auto;
+    min-height: 215px;
+  }
+
+  .services-card-content {
+    max-width: 140px;
+    min-height: 140px;
+  }
+
+  .services-card-img {
+    margin-top: auto;
+  }
+
+  .services-card-content > a > span {
+    display: none;
+  }
+
+  .text3 > span {
+    font-size: 20px;
+  }
+}
